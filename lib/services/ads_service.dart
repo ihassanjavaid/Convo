@@ -1,9 +1,9 @@
 import 'package:firebase_admob/firebase_admob.dart';
 
 // Will be updated when we recieve these, DONDE ones here
-const String appID = "ca-app-pub-5777492202424173~3025761937";
-const String interstitialID = "ca-app-pub-5777492202424173/6773435257";
-const String bannerID = "ca-app-pub-5777492202424173/7164317495";
+const String appIDAndroid = "ca-app-pub-2167282335700083~6409081517";
+const String interstitialIDAndroid = "ca-app-pub-2167282335700083/1902860291";
+const String bannerIDAndroid = "ca-app-pub-2167282335700083/6572733049";
 
 class Ads {
 
@@ -11,14 +11,14 @@ class Ads {
     "Convo", "Conversation", "Question", "Answer", "Topics ", "Eat"];
 
   static const MobileAdTargetingInfo targetingInfo = MobileAdTargetingInfo(
-      testDevices: appID != null ? <String>[appID] : null,
+      testDevices: appIDAndroid != null ? <String>[appIDAndroid] : null,
       nonPersonalizedAds: true,
       keywords: keywordsList
   );
 
   BannerAd createBannerAd() {
     return BannerAd(
-        adUnitId: bannerID,
+        adUnitId: bannerIDAndroid,
         size: AdSize.banner, // can be diff sized
         targetingInfo: targetingInfo,
         listener: (event) {
@@ -32,7 +32,7 @@ class Ads {
 
   InterstitialAd createInterstitialAd() {
     return InterstitialAd(
-        adUnitId: interstitialID,
+        adUnitId: interstitialIDAndroid,
         targetingInfo: targetingInfo,
         listener: (MobileAdEvent event) {
           print("InterstitialAd $event");
