@@ -1,28 +1,23 @@
+import 'package:convo/screens/converstation_screen.dart';
+import 'package:convo/screens/starter_topics_screen.dart';
+import 'package:convo/screens/upgrade_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-void main() => runApp(Convo() );
+void main() => runApp(Convo());
 
 class Convo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "Alpha's Garage",
+      title: "Convo",
       debugShowCheckedModeBanner: false,
       initialRoute: RouteDecider.id,
       routes: {
         RouteDecider.id: (context) => RouteDecider(),
-       /* Login.id: (context) => Login(),
-        Index.id: (context) => Index(
-              screens: <Widget>[
-                Announcement(),
-                UserMessages(),
-                Contacts(),
-              ],
-            ),
-        Contacts.id: (context) => Contacts(),
-        Announcement.id: (context) => Announcement(),
-        UserMessages.id: (context) => UserMessages(),*/
+        ConversationScreen.id: (context) => ConversationScreen(),
+        StarterTopicsScreen.id: (context) => StarterTopicsScreen(),
+        UpgradeScreen.id: (context) => UpgradeScreen(),
       },
     );
   }
