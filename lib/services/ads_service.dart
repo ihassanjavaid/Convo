@@ -1,5 +1,6 @@
 import 'package:firebase_admob/firebase_admob.dart';
 
+// Will be updated when we recieve these, DONDE ones here
 const String appID = "ca-app-pub-5777492202424173~3025761937";
 const String interstitialID = "ca-app-pub-5777492202424173/6773435257";
 const String bannerID = "ca-app-pub-5777492202424173/7164317495";
