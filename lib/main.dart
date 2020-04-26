@@ -1,14 +1,9 @@
-import 'package:alphagarage/screens/announcement.dart';
-import 'package:alphagarage/screens/contacts.dart';
-import 'package:alphagarage/screens/index.dart';
-import 'package:alphagarage/screens/login.dart';
-import 'package:alphagarage/screens/userMessages.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-void main() => runApp(Alfa());
+void main() => runApp(Convo());
 
-class Alfa extends StatelessWidget {
+class Convo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -17,7 +12,7 @@ class Alfa extends StatelessWidget {
       initialRoute: RouteDecider.id,
       routes: {
         RouteDecider.id: (context) => RouteDecider(),
-        Login.id: (context) => Login(),
+       /* Login.id: (context) => Login(),
         Index.id: (context) => Index(
               screens: <Widget>[
                 Announcement(),
@@ -27,7 +22,7 @@ class Alfa extends StatelessWidget {
             ),
         Contacts.id: (context) => Contacts(),
         Announcement.id: (context) => Announcement(),
-        UserMessages.id: (context) => UserMessages(),
+        UserMessages.id: (context) => UserMessages(),*/
       },
     );
   }
@@ -43,11 +38,11 @@ class RouteDecider extends StatelessWidget {
 
     if (userId != null) {
       print('Logged in automatically');
-      Navigator.pushReplacementNamed(context, Index.id);
+      //Navigator.pushReplacementNamed(context, Index.id);
       return;
     } else {
       print('First time sign in');
-      Navigator.pushReplacementNamed(context, Login.id);
+      //Navigator.pushReplacementNamed(context, Login.id);
     }
   }
 

@@ -1,5 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:alphagarage/services/firestore_service.dart';
+import 'package:convo/services/firestore_service.dart';
 
 class Auth {
   final _auth = FirebaseAuth.instance;
