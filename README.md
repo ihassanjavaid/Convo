@@ -1,4 +1,4 @@
-# convo
+# Convo
 
 A new Flutter application to spark new conversation, be that deeper debate or opinion or light hearted fun.
 
