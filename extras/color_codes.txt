@@ -1,5 +1,0 @@
-Navy blue: 0d3e66
-
-Darker blue: 0b1d33
-
-Light blue: 22abe2
