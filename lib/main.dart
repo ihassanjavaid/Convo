@@ -4,6 +4,8 @@ import 'package:convo/screens/upgrade_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'screens/starter_topics_screen.dart';
+
 void main() => runApp(Convo());
 
 class Convo extends StatelessWidget {
@@ -12,7 +14,7 @@ class Convo extends StatelessWidget {
     return MaterialApp(
       title: "Convo",
       debugShowCheckedModeBanner: false,
-      initialRoute: RouteDecider.id,
+      initialRoute: StarterTopicsScreen.id,
       routes: {
         RouteDecider.id: (context) => RouteDecider(),
         ConversationScreen.id: (context) => ConversationScreen(),
